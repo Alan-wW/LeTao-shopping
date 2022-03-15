@@ -1,0 +1,29 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /xb
+spring:
+  datasource:
+    url: jdbc:mysql://42.193.99.39:2892/shop?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Xb005869@
+
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.shopping.Entity
+
+ #分页插件
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
